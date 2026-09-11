@@ -1,6 +1,7 @@
 interface FacultyMember {
   name: string;
   title: string;
+  since?: number;
   bio: string;
   image: string;
   links: {

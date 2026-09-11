@@ -12,9 +12,6 @@ export interface ResearchAreasContent {
     description: string;
   };
   areas: ResearchArea[];
-  footer: {
-    text: string;
-  };
 }
 
 export const researchAreasContent: ResearchAreasContent = {
@@ -44,8 +41,5 @@ export const researchAreasContent: ResearchAreasContent = {
       description: "",
       keywords: ["Wasserstein distance", "Distributionall Robust Optimization"],
     }
-  ],
-  footer: {
-    text: "Explore our research areas"
-  }
+  ]
 };

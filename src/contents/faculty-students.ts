@@ -44,7 +44,7 @@ export const facultyStudentsData: FacultyMember[] = [
   },  
 
   {
-    name: "Kathleene Miao",
+    name: "Kathleen Miao",
     title: "PhD student (Silvana Pesenti)",
     image: "https://lh4.googleusercontent.com/c_Bn58_l_72GX_XBGSuyAme_sFjwpX5J55Q7Z3RrUAYBz-TWSkIXbDrN-jp-zEkwpVMJF1fiI-DXUKie61KF-TPVSQKLcd_C08aOsbiFYHTM52vFCiLrbNxNJf37MAXWiA=w1280",
     bio: "Mathematical problems in insurance and risk management, dependence uncertainty, and robustness.",
@@ -55,7 +55,7 @@ export const facultyStudentsData: FacultyMember[] = [
   },  
 
   {
-    name: "Brendon Tam",
+    name: "Brandon Tam",
     title: "PhD student (Silvana Pesenti)",
     image: "https://brandon-tam.github.io//images/Convocation%20-%20Individual%20Photo.jpg",
     bio: "Multivariate uncertainty sets and distributionally robust optimization.",
@@ -79,6 +79,7 @@ export const facultyStudentsData: FacultyMember[] = [
   {
     name: "Isaac Marchand",
     title: "PhD student (Xiaofei Shi & Christopher Blier-Wong)",
+    since: 2026,
     image: "",
     bio: "",
     links: {
@@ -88,6 +89,7 @@ export const facultyStudentsData: FacultyMember[] = [
   {
     name: "Radu Alexe Padina",
     title: "PhD student (Xiaofei Shi)",
+    since: 2025,
     image: "",
     bio: "",
     links: {
@@ -97,6 +99,7 @@ export const facultyStudentsData: FacultyMember[] = [
   {
     name: "Qinhua Ren",
     title: "Postdoctoral researcher (Silvana Pesenti)",
+    since: 2026,
     image: "",
     bio: "",
     links: {

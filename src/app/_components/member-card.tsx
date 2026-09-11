@@ -146,6 +146,11 @@ export const MemberCard = ({ member, variant = 'faculty' }: { member: FacultyMem
                   <p className="text-sm text-primary/80 dark:text-primary/70 mt-1">
                     {member.title}
                   </p>
+                  {member.since && (
+                    <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                      Since {member.since}
+                    </p>
+                  )}
                 </div>
 
                 {/* Contact Icons */}

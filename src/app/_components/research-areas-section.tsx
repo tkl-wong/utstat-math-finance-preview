@@ -32,16 +32,8 @@ export function ResearchAreasSection() {
             <ResearchAreasGrid areas={researchAreasContent.areas} />
           </div>
 
-          {/* Bottom decoration */}
-          <div className="mt-16 text-center">
-            <div className="inline-flex items-center justify-center space-x-2 text-gray-500 dark:text-gray-400 animate-fade-in-delayed">
-              <span className="w-8 h-px bg-gray-300 dark:bg-gray-600" />
-              <span className="text-sm">{researchAreasContent.footer.text}</span>
-              <span className="w-8 h-px bg-gray-300 dark:bg-gray-600" />
-            </div>
-          </div>
         </div>
       </div>
     </section>
   );
-} 
+}

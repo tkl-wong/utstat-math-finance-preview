@@ -21,11 +21,11 @@ export interface NavigationContent {
 export const navigationContent: NavigationContent = {
   mainNav: [
     { text: "About", href: "/#about-us", isAnchor: true },
-    { text: "News", href: "/news" },
     { text: "People", href: "/people" },
     { text: "Recent Publications", href: "/publications" },
-    { text: "FAQ", href: "/faq" },
-    { text: "Media", href: "/media" }
+    { text: "News", href: "/news" },
+    { text: "Media", href: "/media" },
+    { text: "FAQ", href: "/faq" }
   ],
   externalLinks: [
     {

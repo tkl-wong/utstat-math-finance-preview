@@ -63,11 +63,11 @@ const Header = () => {
             <div className="hidden lg:flex items-center space-x-8">
               <nav className="flex items-center space-x-6">
                 <NavLink href={`${BASE_PATH}/#about-us`} dimmed={scrolled} isAnchor>About</NavLink>
-                <NavLink href="/news" dimmed={scrolled}>News</NavLink>
                 <NavLink href="/people" dimmed={scrolled}>People</NavLink>
                 <NavLink href="/publications" dimmed={scrolled}>Recent Publications</NavLink>
-                <NavLink href="/faq" dimmed={scrolled}>FAQ</NavLink>
+                <NavLink href="/news" dimmed={scrolled}>News</NavLink>
                 <NavLink href="/media" dimmed={scrolled}>Media</NavLink>
+                <NavLink href="/faq" dimmed={scrolled}>FAQ</NavLink>
               </nav>
               <div className="h-6 w-px bg-base-content/5"></div>
               <a 
@@ -139,11 +139,11 @@ const Header = () => {
             
             <nav className="flex-1 overflow-y-auto p-5 space-y-1 bg-base-100">
               <MobileNavLink href={`${BASE_PATH}/#about-us`} onClick={() => setMobileMenuOpen(false)} isAnchor>About</MobileNavLink>
-              <MobileNavLink href="/news" onClick={() => setMobileMenuOpen(false)}>News</MobileNavLink>
               <MobileNavLink href="/people" onClick={() => setMobileMenuOpen(false)}>People</MobileNavLink>
               <MobileNavLink href="/publications" onClick={() => setMobileMenuOpen(false)}>Recent Publications</MobileNavLink>
-              <MobileNavLink href="/faq" onClick={() => setMobileMenuOpen(false)}>FAQ</MobileNavLink>
+              <MobileNavLink href="/news" onClick={() => setMobileMenuOpen(false)}>News</MobileNavLink>
               <MobileNavLink href="/media" onClick={() => setMobileMenuOpen(false)}>Media</MobileNavLink>
+              <MobileNavLink href="/faq" onClick={() => setMobileMenuOpen(false)}>FAQ</MobileNavLink>
             </nav>
 
             <div className="p-5 border-t border-base-200 bg-base-100">
