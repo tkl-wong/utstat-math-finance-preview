@@ -22,10 +22,10 @@ export const navigationContent: NavigationContent = {
   mainNav: [
     { text: "About", href: "/#about-us", isAnchor: true },
     { text: "News", href: "/news" },
-    { text: "People", href: "/#faculty-members", isAnchor: true },
+    { text: "People", href: "/people" },
     { text: "Recent Publications", href: "/publications" },
     { text: "FAQ", href: "/faq" },
-    { text: "Media", href: "/#media", isAnchor: true }
+    { text: "Media", href: "/media" }
   ],
   externalLinks: [
     {

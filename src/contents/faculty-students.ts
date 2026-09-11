@@ -44,17 +44,6 @@ export const facultyStudentsData: FacultyMember[] = [
   },  
 
   {
-    name: "Emma Kroell",
-    title: "PhD student (Sebastian Jaimungal & Silvana Pesenti)",
-    image: "https://www.emmakroell.ca/img/headshot_oval.png",
-    bio: "Risk management and model uncertainty in insurance.",
-    links: {
-      email: "emma.kroell@mail.utoronto.ca",
-      website: "https://www.emmakroell.ca/",
-    },
-  },  
-
-  {
     name: "Kathleene Miao",
     title: "PhD student (Silvana Pesenti)",
     image: "https://lh4.googleusercontent.com/c_Bn58_l_72GX_XBGSuyAme_sFjwpX5J55Q7Z3RrUAYBz-TWSkIXbDrN-jp-zEkwpVMJF1fiI-DXUKie61KF-TPVSQKLcd_C08aOsbiFYHTM52vFCiLrbNxNJf37MAXWiA=w1280",
@@ -78,17 +67,6 @@ export const facultyStudentsData: FacultyMember[] = [
   
 
   {
-    name: "Liam Welsh",
-    title: "PhD student (Sebastian Jaimungal)",
-    image: "#",
-    bio: "Climate finance, renewable energy (market) modelling, mean-field games, and computational finance.",
-    links: {
-      email: "liam.welsh@mail.utoronto.ca",
-      website: "https://scholar.google.com/citations?user=T8toWLkAAAAJ&hl=en",
-    },
-  },
-
-    {
     name: "Xuchen Wu",
     title: "PhD student (Sebastian Jaimungal)",
     image: "#",
@@ -96,6 +74,34 @@ export const facultyStudentsData: FacultyMember[] = [
     links: {
       email: "xuchen.wu@mail.utoronto.ca",
       website: "",
+    },
+  },
+  {
+    name: "Isaac Marchand",
+    title: "PhD student (Xiaofei Shi & Christopher Blier-Wong)",
+    image: "",
+    bio: "",
+    links: {
+      email: "isaac.marchand@mail.utoronto.ca",
+    },
+  },
+  {
+    name: "Radu Alexe Padina",
+    title: "PhD student (Xiaofei Shi)",
+    image: "",
+    bio: "",
+    links: {
+      email: "radu.alexepadina@mail.utoronto.ca",
+    },
+  },
+  {
+    name: "Qinhua Ren",
+    title: "Postdoctoral researcher (Silvana Pesenti)",
+    image: "",
+    bio: "",
+    links: {
+      email: "qinghua.ren@utoronto.ca",
+      website: "https://qinghua-ren.github.io/",
     },
   },
 ];

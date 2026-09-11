@@ -18,14 +18,14 @@ export const featuredVideos: Video[] = [
     id: "2",
     title: "Risk-Aware Reinforcement Learning for Finance",
     description: "SIAM Activity Group on FME Virtual Talk Series.",
-    thumbnailUrl: "/assets/videos/machine-learning.jpg",
-    youtubeId: "LOMSP9l07H0&t" // Replace with actual YouTube video ID
+    thumbnailUrl: "https://img.youtube.com/vi/LOMSP9l07H0/hqdefault.jpg",
+    youtubeId: "LOMSP9l07H0"
   },
   {
     id: "3",
     title: "Robust Risk Measures with Silvana Pesenti",
     description: "SIAM Activity Group on FME Virtual Talk Series.",
-    thumbnailUrl: "/assets/videos/machine-learning.jpg",
-    youtubeId: "iPUrGSYZo70&t" // Replace with actual YouTube video ID
+    thumbnailUrl: "https://img.youtube.com/vi/iPUrGSYZo70/hqdefault.jpg",
+    youtubeId: "iPUrGSYZo70"
   },
 ]; 

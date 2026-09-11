@@ -64,14 +64,14 @@ const Header = () => {
               <nav className="flex items-center space-x-6">
                 <NavLink href={`${BASE_PATH}/#about-us`} dimmed={scrolled} isAnchor>About</NavLink>
                 <NavLink href="/news" dimmed={scrolled}>News</NavLink>
-                <NavLink href={`${BASE_PATH}/#faculty-members`} dimmed={scrolled} isAnchor>People</NavLink>
+                <NavLink href="/people" dimmed={scrolled}>People</NavLink>
                 <NavLink href="/publications" dimmed={scrolled}>Recent Publications</NavLink>
                 <NavLink href="/faq" dimmed={scrolled}>FAQ</NavLink>
-                <NavLink href={`${BASE_PATH}/#media`} dimmed={scrolled} isAnchor>Media</NavLink>
+                <NavLink href="/media" dimmed={scrolled}>Media</NavLink>
               </nav>
               <div className="h-6 w-px bg-base-content/5"></div>
               <a 
-                href="https://www.utoronto.ca" 
+                href="https://www.statistics.utoronto.ca/" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className={cn(
@@ -79,7 +79,7 @@ const Header = () => {
                   scrolled ? "text-primary/80 hover:text-primary" : "text-primary/90 hover:text-primary"
                 )}
               >
-                UofT Portal
+                Statistical Sciences
                 <svg className="w-4 h-4 ml-1 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
@@ -140,21 +140,21 @@ const Header = () => {
             <nav className="flex-1 overflow-y-auto p-5 space-y-1 bg-base-100">
               <MobileNavLink href={`${BASE_PATH}/#about-us`} onClick={() => setMobileMenuOpen(false)} isAnchor>About</MobileNavLink>
               <MobileNavLink href="/news" onClick={() => setMobileMenuOpen(false)}>News</MobileNavLink>
-              <MobileNavLink href={`${BASE_PATH}/#faculty-members`} onClick={() => setMobileMenuOpen(false)} isAnchor>People</MobileNavLink>
+              <MobileNavLink href="/people" onClick={() => setMobileMenuOpen(false)}>People</MobileNavLink>
               <MobileNavLink href="/publications" onClick={() => setMobileMenuOpen(false)}>Recent Publications</MobileNavLink>
               <MobileNavLink href="/faq" onClick={() => setMobileMenuOpen(false)}>FAQ</MobileNavLink>
-              <MobileNavLink href={`${BASE_PATH}/#media`} onClick={() => setMobileMenuOpen(false)} isAnchor>Media</MobileNavLink>
+              <MobileNavLink href="/media" onClick={() => setMobileMenuOpen(false)}>Media</MobileNavLink>
             </nav>
 
             <div className="p-5 border-t border-base-200 bg-base-100">
               <a 
-                href="https://www.utoronto.ca" 
+                href="https://www.statistics.utoronto.ca/" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center space-x-2 px-4 py-3 bg-primary/10 text-primary hover:bg-primary/20 rounded-lg transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                <span className="font-medium">UofT Portal</span>
+                <span className="font-medium">Statistical Sciences</span>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>

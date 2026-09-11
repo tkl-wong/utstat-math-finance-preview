@@ -6,6 +6,12 @@ import { EnvelopeIcon, GlobeAltIcon, AcademicCapIcon } from '@heroicons/react/24
 
 export const MemberCard = ({ member, variant = 'faculty' }: { member: FacultyMember, variant?: 'faculty' | 'student' }) => {
   const isFaculty = variant === 'faculty';
+  const hasImage = Boolean(member.image && member.image !== '#');
+  const initials = member.name
+    .split(' ')
+    .map((part) => part[0])
+    .join('')
+    .slice(0, 2);
 
   if (isFaculty) {
     return (
@@ -22,13 +28,19 @@ export const MemberCard = ({ member, variant = 'faculty' }: { member: FacultyMem
           {/* Image Section - Fixed aspect ratio */}
           <div className="relative w-full pt-[75%]">
             <div className="absolute inset-0">
-              <Image
-                src={member.image}
-                alt={member.name}
-                fill
-                className="object-cover object-center"
-                sizes="(min-width: 1280px) 420px, (min-width: 1024px) 380px, (min-width: 768px) 50vw, 100vw"
-              />
+              {hasImage ? (
+                <Image
+                  src={member.image}
+                  alt={member.name}
+                  fill
+                  className="object-cover object-center"
+                  sizes="(min-width: 1280px) 420px, (min-width: 1024px) 380px, (min-width: 768px) 50vw, 100vw"
+                />
+              ) : (
+                <div className="flex h-full items-center justify-center bg-primary/10 text-5xl font-semibold text-primary/70">
+                  {initials}
+                </div>
+              )}
               {/* Gradient Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
               
@@ -109,13 +121,19 @@ export const MemberCard = ({ member, variant = 'faculty' }: { member: FacultyMem
           <div className="flex gap-5 h-full">
             {/* Avatar */}
             <div className="relative w-[72px] h-[72px] rounded-lg overflow-hidden flex-shrink-0">
-              <Image
-                src={member.image}
-                alt={member.name}
-                fill
-                className="object-cover object-center"
-                sizes="72px"
-              />
+              {hasImage ? (
+                <Image
+                  src={member.image}
+                  alt={member.name}
+                  fill
+                  className="object-cover object-center"
+                  sizes="72px"
+                />
+              ) : (
+                <div className="flex h-full items-center justify-center bg-primary/10 text-lg font-semibold text-primary/70">
+                  {initials}
+                </div>
+              )}
             </div>
 
             {/* Content */}

@@ -35,7 +35,7 @@ export const heroContent: HeroContent = {
     },
     secondary: {
       text: "Meet Our Faculty",
-      href: "#faculty-members"
+      href: "/people"
     }
   }
 }; 

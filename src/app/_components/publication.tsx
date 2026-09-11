@@ -11,7 +11,11 @@ export default function Publication({
   return (
     <article className="group relative flex flex-col sm:flex-row gap-6 p-6 bg-base-100 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
       <PublicationImage image={publication.image} title={publication.title} />
-      <div className="flex flex-col flex-1 sm:pl-6 space-y-4">
+      <div
+        className={`flex flex-col flex-1 space-y-4 ${
+          publication.image ? "sm:pl-6" : ""
+        }`}
+      >
         <PublicationDetails
           title={publication.title}
           venue={publication.venue}

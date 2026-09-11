@@ -32,9 +32,9 @@ export interface AboutContent {
 
 export const aboutContent: AboutContent = {
   hero: {
-    badge: "About Our Institute",
-    title: "Advancing Mathematical Finance Research and Application to Drive Economic Innovation",
-    description: "We are a globally-renowned institute that empowers researchers, financial institutions, and governments to develop and implement advanced mathematical models responsibly."
+    badge: "About Our Research Group",
+    title: "Advancing Mathematical Finance Through Research and Collaboration",
+    description: "We are a globally renowned research group advancing mathematical finance through rigorous research, interdisciplinary collaboration, and the training of emerging scholars."
   },
   missions: [
     {
@@ -54,7 +54,7 @@ export const aboutContent: AboutContent = {
     }
   ],
   vision: {
-    statement: "Our institute stands at the intersection of mathematics, finance, and technology. Through rigorous research and interdisciplinary collaboration, we develop pioneering computational methods and analytical frameworks that shape the future of financial markets."
+    statement: "Our research group works at the intersection of mathematics, finance, and technology. Through rigorous research and interdisciplinary collaboration, we develop computational methods and analytical frameworks that help shape the future of financial markets."
   },
   metrics: [
     {

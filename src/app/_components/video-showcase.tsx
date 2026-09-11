@@ -34,38 +34,42 @@ export function VideoShowcase({ videos }: VideoShowcaseProps) {
           </p>
         </div>
 
-        {/* Video Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Video List */}
+        <div className="mx-auto max-w-5xl space-y-6">
           {videos.map((video) => (
-            <div
+            <button
+              type="button"
               key={video.id}
-              className="group relative aspect-video rounded-xl overflow-hidden bg-base-300 cursor-pointer"
+              className="group grid w-full overflow-hidden rounded-2xl border border-base-300 bg-base-100 text-left shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 md:grid-cols-[minmax(260px,0.9fr)_minmax(0,1.1fr)]"
               onClick={() => setSelectedVideo(video)}
+              aria-label={`Watch ${video.title}`}
             >
-              {/* Thumbnail */}
-              <img
-                src={video.thumbnailUrl}
-                alt={video.title}
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors duration-300">
-                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <PlayIcon className="w-16 h-16 text-white mb-4" />
+              <div className="relative aspect-video overflow-hidden bg-base-300">
+                <img
+                  src={video.thumbnailUrl}
+                  alt=""
+                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                />
+                <div className="absolute inset-0 flex items-center justify-center bg-black/5 transition-colors duration-300 group-hover:bg-black/15">
+                  <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white/95 text-primary shadow-lg transition-transform duration-300 group-hover:scale-105">
+                    <PlayIcon className="ml-1 h-7 w-7" />
+                  </span>
                 </div>
               </div>
 
-              {/* Video Info */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
-                <h3 className="text-lg font-semibold text-white mb-2">
+              <div className="flex flex-col justify-center p-6 md:p-8">
+                <h3 className="mb-3 text-2xl font-semibold tracking-tight text-base-content">
                   {video.title}
                 </h3>
-                <p className="text-sm text-white/80 line-clamp-2">
+                <p className="text-base leading-relaxed text-base-content/70">
                   {video.description}
                 </p>
+                <span className="mt-5 inline-flex items-center gap-2 font-medium text-primary">
+                  <PlayIcon className="h-4 w-4" />
+                  Watch video
+                </span>
               </div>
-            </div>
+            </button>
           ))}
         </div>
 
@@ -75,8 +79,10 @@ export function VideoShowcase({ videos }: VideoShowcaseProps) {
             <div className="relative w-full max-w-5xl mx-auto">
               {/* Close Button */}
               <button
+                type="button"
                 onClick={() => setSelectedVideo(null)}
                 className="absolute -top-12 right-0 p-2 text-white/80 hover:text-white transition-colors"
+                aria-label="Close video"
               >
                 <XMarkIcon className="w-6 h-6" />
               </button>
@@ -84,6 +90,7 @@ export function VideoShowcase({ videos }: VideoShowcaseProps) {
               {/* Video Player */}
               <div className="relative pb-[56.25%] h-0">
                 <iframe
+                  title={selectedVideo.title}
                   src={`https://www.youtube.com/embed/${selectedVideo.youtubeId}?autoplay=1`}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
