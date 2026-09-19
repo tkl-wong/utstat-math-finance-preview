@@ -9,9 +9,9 @@ export function ResearchAreaCard({ area }: { area: ResearchArea }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      className="w-full border-t border-gray-200 py-10 first:border-t-0 dark:border-gray-800"
+      className="w-full border-t border-gray-200 py-7 first:border-t-0 dark:border-gray-800"
     >
-      <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(18rem,0.7fr)] lg:gap-16">
+      <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(18rem,0.7fr)] lg:gap-12">
         <div>
           <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
             {area.title}
@@ -31,7 +31,7 @@ export function ResearchAreaCard({ area }: { area: ResearchArea }) {
             <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">
               Selected publications
             </h4>
-            <ul className="mt-4 space-y-5">
+            <ul className="mt-3 space-y-4">
               {area.featuredPapers.map((paper) => (
                 <li key={paper.href}>
                   <a

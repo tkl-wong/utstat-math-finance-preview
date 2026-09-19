@@ -9,8 +9,8 @@ export function ResearchAreasGrid({ areas }: { areas: ResearchArea[] }) {
   );
 
   return (
-    <section className="py-12">
-      <div className="space-y-8">
+    <section className="py-4">
+      <div className="space-y-2">
         {alphabeticalAreas.map((area) => (
           <ResearchAreaCard key={area.slug} area={area} />
         ))}

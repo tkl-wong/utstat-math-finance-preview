@@ -11,8 +11,11 @@ const foregroundImagePath = imagePath(heroContent.foregroundImage.imagePath);
 export const HeroSection = () => {
   return (
     <section
-      className="relative min-h-screen overflow-hidden bg-fixed bg-cover bg-center"
-      style={{ backgroundImage: `url(${backgroundImagePath})` }}
+      className="relative min-h-[68vh] overflow-hidden bg-fixed bg-cover"
+      style={{
+        backgroundImage: `url(${backgroundImagePath})`,
+        backgroundPosition: "center 98%",
+      }}
     >
       <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-black/70 to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-r from-brand/40 via-transparent to-transparent backdrop-blur-sm" />
@@ -20,21 +23,21 @@ export const HeroSection = () => {
       {/* Content */}
       <div className="relative h-full">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
-          <div className="grid lg:grid-cols-2 gap-12 items-center h-full py-20">
+          <div className="grid h-full items-center gap-10 py-8 lg:grid-cols-2">
             {/* Left Column - Text Content */}
-            <div className="text-white space-y-8 animate-fade-in">
-              <h1 className="text-5xl lg:text-7xl font-bold leading-tight tracking-tight">
+            <div className="animate-fade-in space-y-5 text-white">
+              <h1 className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
                 <span className="inline-block animate-slide-up text-white">
                   {heroContent.title.main}
                 </span>
-                <span className="block text-accent mt-4 drop-shadow-lg animate-slide-up-delayed">
+                <span className="mt-2 block animate-slide-up-delayed text-accent drop-shadow-lg">
                   {heroContent.title.highlight}
                 </span>
               </h1>
-              <p className="text-xl leading-relaxed max-w-2xl text-gray-200 font-light animate-fade-in-delayed">
+              <p className="max-w-2xl animate-fade-in-delayed text-lg font-light leading-relaxed text-gray-200">
                 {heroContent.description}
               </p>
-              <div className="flex flex-wrap gap-6 pt-6 animate-fade-in-delayed-2">
+              <div className="flex flex-wrap gap-4 pt-2 animate-fade-in-delayed-2">
                 <Link
                   href={heroContent.cta.primary.href}
                   className="group relative inline-flex h-12 items-center justify-center rounded-lg bg-accent px-4 shadow-lg transition-all duration-300 hover:bg-accent/90 hover:shadow-accent/50"
@@ -60,7 +63,7 @@ export const HeroSection = () => {
             <div className="hidden lg:flex relative items-center justify-end">
               <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-brand/20 rounded-full blur-3xl animate-pulse-slow" />
               <div className="absolute inset-0 bg-gradient-to-tr from-brand/20 to-accent/20 rounded-full blur-3xl animate-pulse-slow-delayed" />
-              <div className="relative w-full max-w-lg aspect-[16/10] overflow-hidden rounded-2xl border border-white/30 shadow-2xl shadow-black/40">
+              <div className="relative aspect-[16/10] w-full max-w-md overflow-hidden rounded-2xl border border-white/30 shadow-2xl shadow-black/40">
                 <Image
                   src={foregroundImagePath}
                   alt={heroContent.foregroundImage.alt}

@@ -18,22 +18,22 @@ export function PostPreview({
   return (
     <Link 
       href={`/news/${slug}`}
-      className="group block py-12 relative hover:bg-brand/[0.02] -mx-6 px-6 transition-colors duration-300"
+      className="group relative -mx-6 block px-6 py-7 transition-colors duration-300 hover:bg-brand/[0.02]"
     >
       <div className="relative">
         {/* Date */}
-        <div className="flex items-center gap-1.5 text-sm text-gray-600 dark:text-gray-400 mb-4">
+        <div className="mb-3 flex items-center gap-1.5 text-sm text-gray-600 dark:text-gray-400">
           <CalendarIcon className="w-4 h-4" />
           <DateFormatter dateString={date} />
         </div>
 
         {/* Title */}
-        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-brand transition-colors duration-300">
+        <h3 className="mb-3 text-2xl font-bold text-gray-900 transition-colors duration-300 group-hover:text-brand dark:text-white">
           {title}
         </h3>
 
         {/* Excerpt */}
-        <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+        <p className="mb-3 leading-relaxed text-gray-600 dark:text-gray-400">
           {excerpt}
         </p>
 

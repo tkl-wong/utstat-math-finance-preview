@@ -11,7 +11,7 @@ const inter = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: `Math Finance | UTStat`,
+  title: `Math Finance | U Toronto`,
   description: `The Math Finance program at UTStat is a unique program that combines the study of mathematics and finance.`,
 };
 

@@ -9,10 +9,10 @@ type Props = {
 
 export function MoreStories({ posts }: Props) {
   return (
-    <section className="mt-8">
+    <section className="mt-4">
       <a className="anchor" id="headlines"></a>
-      <div className="flex items-center justify-between mb-8">
-        <h2 className="text-5xl md:text-7xl font-bold tracking-tighter leading-tight">
+      <div className="mb-6 flex items-center justify-between">
+        <h2 className="text-4xl font-bold leading-tight tracking-tight md:text-5xl">
           News
         </h2>
         <Link
@@ -23,7 +23,7 @@ export function MoreStories({ posts }: Props) {
           <ArrowRightIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
         </Link>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-x-16 lg:gap-x-32 gap-y-20 md:gap-y-32 mb-32">
+      <div className="mb-16 grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
         {posts.map((post) => (
           <PostPreview
             key={post.slug}

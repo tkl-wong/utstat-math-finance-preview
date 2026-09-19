@@ -27,6 +27,8 @@ export function PublicationLinks({
           <a
             key={key}
             href={url}
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-1 text-xs text-brand transition-colors hover:text-brand/80"
           >
             {React.createElement(linkIcons[key as keyof typeof links].icon, {
