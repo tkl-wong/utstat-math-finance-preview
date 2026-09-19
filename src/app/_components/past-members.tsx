@@ -3,7 +3,7 @@ import { pastMembersData } from "@/contents/past-members";
 
 const PastMembers = () => {
   return (
-    <section className="py-20 border-t border-base-300/70" id="past-members">
+    <section className="py-20 border-t border-gray-200/70" id="past-members">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">

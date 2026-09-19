@@ -12,10 +12,10 @@ export function PostBody({ content }: Props) {
         prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-white
         prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6
         prose-p:text-gray-600 dark:prose-p:text-gray-300 prose-p:leading-relaxed
-        prose-a:text-primary hover:prose-a:text-primary-focus prose-a:no-underline
+        prose-a:text-brand hover:prose-a:text-brand/80 prose-a:no-underline
         prose-strong:text-gray-900 dark:prose-strong:text-white
-        prose-blockquote:border-l-primary prose-blockquote:text-gray-600 dark:prose-blockquote:text-gray-300
-        prose-code:text-primary prose-code:bg-primary/10 prose-code:px-1 prose-code:rounded
+        prose-blockquote:border-l-brand prose-blockquote:text-gray-600 dark:prose-blockquote:text-gray-300
+        prose-code:text-brand prose-code:bg-brand/10 prose-code:px-1 prose-code:rounded
         prose-pre:bg-gray-900 dark:prose-pre:bg-gray-800
         prose-img:rounded-xl prose-img:shadow-lg
         prose-hr:border-gray-200 dark:prose-hr:border-gray-800
@@ -27,8 +27,8 @@ export function PostBody({ content }: Props) {
       </div>
 
       {/* Decorative Elements */}
-      <div className="absolute -inset-x-4 top-0 h-96 bg-gradient-to-b from-primary/5 to-transparent -z-10 blur-3xl" />
-      <div className="absolute -inset-x-4 bottom-0 h-96 bg-gradient-to-t from-secondary/5 to-transparent -z-10 blur-3xl" />
+      <div className="absolute -inset-x-4 top-0 h-96 bg-gradient-to-b from-brand/5 to-transparent -z-10 blur-3xl" />
+      <div className="absolute -inset-x-4 bottom-0 h-96 bg-gradient-to-t from-accent/5 to-transparent -z-10 blur-3xl" />
 
       {/* Share Buttons */}
       <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">

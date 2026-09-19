@@ -9,23 +9,25 @@ import {
 export function PublicationLinks({
   links,
 }: {
-  links: { doi?: string; arxiv?: string; pdf?: string; code?: string };
+  links: { doi?: string; publisher?: string; arxiv?: string; ssrn?: string; pdf?: string; code?: string };
 }) {
   const linkIcons = {
     doi: { icon: LinkIcon, label: "DOI" },
+    publisher: { icon: LinkIcon, label: "Published" },
     arxiv: { icon: AcademicCapIcon, label: "arXiv" },
+    ssrn: { icon: AcademicCapIcon, label: "SSRN" },
     pdf: { icon: DocumentArrowDownIcon, label: "PDF" },
     code: { icon: DocumentTextIcon, label: "Code" },
   };
 
   return (
-    <div className="flex flex-wrap gap-4 pt-4 mt-auto">
+    <div className="flex flex-wrap gap-3">
       {Object.entries(links).map(([key, url]) =>
         url ? (
           <a
             key={key}
             href={url}
-            className="flex items-center gap-1 text-sm text-primary hover:text-primary/80 transition-colors"
+            className="flex items-center gap-1 text-xs text-brand transition-colors hover:text-brand/80"
           >
             {React.createElement(linkIcons[key as keyof typeof links].icon, {
               className: "h-4 w-4",

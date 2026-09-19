@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export function Footer() {
   return (
-    <footer className="footer text-nase-content items-center p-4 container">
-      <aside className="grid-flow-col items-center">
+    <footer className="container flex flex-col items-center justify-between gap-6 p-4 text-gray-900 md:flex-row">
+      <aside className="flex items-center gap-4">
         <Image
           src="https://sgsu-uoft.github.io/ResearchDay2022/dept_logo.png"
           alt="logo"
@@ -12,7 +12,7 @@ export function Footer() {
         />
         <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
       </aside>
-      <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+      <nav className="flex gap-4">
         <a>
           <svg
             xmlns="http://www.w3.org/2000/svg"

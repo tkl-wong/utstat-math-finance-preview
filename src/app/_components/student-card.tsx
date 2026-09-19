@@ -47,7 +47,7 @@ export const StudentCard = ({ student }: { student: FacultyMember }) => {
               {student.links.email && (
                 <a
                   href={`mailto:${student.links.email}`}
-                  className="text-sm text-primary hover:text-primary-focus transition-colors"
+                  className="text-sm text-brand hover:text-brand/80 transition-colors"
                   onClick={(e) => e.stopPropagation()}
                 >
                   Email
@@ -58,7 +58,7 @@ export const StudentCard = ({ student }: { student: FacultyMember }) => {
                   href={student.links.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-primary hover:text-primary-focus transition-colors"
+                  className="text-sm text-brand hover:text-brand/80 transition-colors"
                   onClick={(e) => e.stopPropagation()}
                 >
                   Website

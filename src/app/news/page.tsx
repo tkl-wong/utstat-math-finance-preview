@@ -6,24 +6,24 @@ export default function Blog() {
   const posts = getAllPosts();
 
   return (
-    <main className="min-h-screen bg-base-200">
+    <main className="min-h-screen bg-gray-50">
       {/* Header Section */}
       <section className="relative py-24 overflow-hidden mb-16">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.07] to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-br from-brand/[0.07] to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200 dark:via-gray-800 to-transparent" />
         </div>
-        
+
         <div className="container mx-auto px-6 relative">
           <div className="text-center max-w-2xl mx-auto">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary mb-8 rotate-12 hover:rotate-0 transition-transform duration-300">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-brand/10 text-brand mb-8 rotate-12 hover:rotate-0 transition-transform duration-300">
               <NewspaperIcon className="w-8 h-8" />
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 via-primary to-gray-700 dark:from-white dark:via-primary-light dark:to-gray-300 bg-clip-text text-transparent">
-              Latest Updates
+            <h1 className="mb-6 text-4xl font-bold text-gray-900 md:text-5xl">
+              News and Updates
             </h1>
             <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-8">
-              Stay updated with the latest developments in mathematical finance and research breakthroughs.
+              Recent news from members of the University of Toronto Mathematical Finance group.
             </p>
           </div>
         </div>
@@ -54,4 +54,4 @@ export default function Blog() {
       <ScrollToTop />
     </main>
   );
-} 
+}

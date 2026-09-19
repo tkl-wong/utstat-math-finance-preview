@@ -8,20 +8,22 @@ interface Publication {
   image: string;
   links: {
     doi?: string;
+    publisher?: string;
     pdf?: string;
     arxiv?: string;
+    ssrn?: string;
     code?: string;
   };
   tags: string[];
 }
 
 type PublicationFilterOptions = {
-  venue: string[];
-  tags: string[];
+  faculty: string[];
+  keywords: string[];
 };
 
 type PublicationFilters = {
-  venue: string[];
-  tags: string[];
+  faculty: string[];
+  keywords: string[];
   search: string;
 };

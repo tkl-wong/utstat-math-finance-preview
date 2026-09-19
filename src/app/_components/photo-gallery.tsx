@@ -62,16 +62,16 @@ export function PhotoGallery({ gallery }: PhotoGalleryProps) {
     selectedIndex === null ? null : gallery.photos[selectedIndex];
 
   return (
-    <section className="bg-base-100 py-24" aria-labelledby="photo-gallery-title">
+    <section className="bg-white py-24" aria-labelledby="photo-gallery-title">
       <div className="container mx-auto px-6">
         <div className="mb-12 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
           <h2
             id="photo-gallery-title"
-            className="text-4xl font-bold tracking-tight text-base-content"
+            className="text-4xl font-bold tracking-tight text-gray-900"
           >
             {gallery.title}
           </h2>
-          <p className="text-base text-base-content/65">{gallery.details}</p>
+          <p className="text-base text-gray-600">{gallery.details}</p>
         </div>
 
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
@@ -80,7 +80,7 @@ export function PhotoGallery({ gallery }: PhotoGalleryProps) {
               type="button"
               key={photo.src}
               onClick={() => setSelectedIndex(index)}
-              className={`group relative overflow-hidden rounded-2xl bg-base-300 text-left shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 ${
+              className={`group relative overflow-hidden rounded-2xl bg-gray-200 text-left shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 ${
                 index > 1 ? "md:col-span-2" : ""
               }`}
               style={{ aspectRatio: `${photo.width} / ${photo.height}` }}

@@ -4,6 +4,7 @@ interface FacultyMember {
   since?: number;
   bio: string;
   image: string;
+  imagePosition?: string;
   links: {
     email?: string;
     website?: string;

@@ -16,7 +16,7 @@ export const pastMembersData: FacultyMember[] = [
     bio: "Climate finance, renewable energy (market) modelling, mean-field games, and computational finance.",
     links: {
       email: "liam.welsh@mail.utoronto.ca",
-      website: "https://scholar.google.com/citations?user=T8toWLkAAAAJ&hl=en",
+      googleScholar: "https://scholar.google.com/citations?user=T8toWLkAAAAJ&hl=en",
     },
   },
 ];

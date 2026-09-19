@@ -1,11 +1,51 @@
-export const faqsData = [
+interface FAQContentItem {
+  question: string;
+  answer: string;
+  bullets?: string[];
+  link?: {
+    label: string;
+    href: string;
+  };
+}
+
+interface FAQContentCategory {
+  category: string;
+  items: FAQContentItem[];
+}
+
+export const faqsData: FAQContentCategory[] = [
   {
     category: "Working with us",
     items: [
       {
         question: "PhD program",
         answer:
-          "",
+          "The Department of Statistical Sciences offers a PhD program in Statistics with mathematical finance as a research field.",
+        bullets: [
+          "Applications generally close in mid-November; consult the department’s admissions page for the current deadline.",
+          "Prospective students are encouraged to contact faculty members with related research interests.",
+          "Applicants should identify the faculty members they are interested in working with in their application.",
+        ],
+        link: {
+          label: "View admission information",
+          href: "https://www.statistics.utoronto.ca/graduate/admission-information",
+        },
+      },
+      {
+        question: "Undergraduate and master’s students",
+        answer:
+          "We do not currently offer a thesis-based MSc program in mathematical finance. Undergraduate and MSc students interested in completing a research project with a member of the group are welcome to contact faculty members directly.",
+      },
+      {
+        question: "Industry collaboration",
+        answer:
+          "We have active collaborations with industry partners to apply our research in practice. These partnerships often support PhD students or postdoctoral researchers, and we welcome opportunities to work with additional partners. Organizations interested in collaborating are encouraged to contact the faculty member whose research is most closely aligned with their interests.",
+        bullets: [
+          "Fund PhD research projects aligned with our research areas, potentially with matching support through programs such as Mitacs or NSERC Alliance.",
+          "Support postdoctoral researchers working on shared research problems.",
+          "Hire graduates from our group.",
+          "Recruit interns from our group or related undergraduate, MFI, MScAC, and MSc programs.",
+        ],
       },
       {
         question: "Postdoctoral positions",

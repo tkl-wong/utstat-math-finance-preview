@@ -6,7 +6,7 @@ export function MemberCardLinks({ links }: { links: { email?: string; website?: 
       {links.email && (
         <a
           href={`mailto:${links.email}`}
-          className="text-gray-400 hover:text-primary transition-colors duration-300"
+          className="text-gray-400 hover:text-brand transition-colors duration-300"
           aria-label="Email"
         >
           <EnvelopeIcon className="h-5 w-5" />
@@ -15,7 +15,7 @@ export function MemberCardLinks({ links }: { links: { email?: string; website?: 
       {links.website && (
         <a
           href={links.website}
-          className="text-gray-400 hover:text-primary transition-colors duration-300"
+          className="text-gray-400 hover:text-brand transition-colors duration-300"
           aria-label="Website"
         >
           <GlobeAltIcon className="h-5 w-5" />

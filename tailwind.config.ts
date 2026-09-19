@@ -28,6 +28,10 @@ const config: Config = {
       padding: "1.25rem",
     },
     extend: {
+      colors: {
+        brand: "#1e3765",
+        accent: "#007fa3",
+      },
       letterSpacing: {
         tighter: "-.04em",
       },
@@ -47,7 +51,7 @@ const config: Config = {
         'fade-in': 'fade-in 0.8s ease-out forwards',
       },
       backgroundImage: {
-        'grid-pattern': "linear-gradient(to right, rgb(var(--color-base-content) / 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgb(var(--color-base-content) / 0.1) 1px, transparent 1px)",
+        'grid-pattern': "linear-gradient(to right, rgb(17 24 39 / 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgb(17 24 39 / 0.1) 1px, transparent 1px)",
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       },
       backgroundSize: {

@@ -10,7 +10,7 @@ export function MemberCardDetails({
   return (
     <div className="space-y-4 max-w-sm">
       <div>
-        <h3 className="text-xl font-medium text-primary mb-1">{name}</h3>
+        <h3 className="text-xl font-medium text-brand mb-1">{name}</h3>
         <p className="text-sm text-gray-500 font-light tracking-wide">
           {title}
         </p>

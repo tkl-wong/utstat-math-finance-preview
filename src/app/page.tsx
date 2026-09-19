@@ -14,9 +14,9 @@ export default function Index() {
     <main>
         <HeroSection />
         <Container>
-          {allPosts.length > 0 && <MoreStories posts={allPosts} />}
           <AboutUs />
           <ResearchAreasSection />
+          {allPosts.length > 0 && <MoreStories posts={allPosts} />}
           <ScrollToTop />
       </Container>
     </main>

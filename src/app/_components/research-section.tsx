@@ -79,7 +79,7 @@ const ResearchSection = () => {
             >
               <div className="max-w-4xl">
                 <div className="flex items-center gap-8 mb-6">
-                  <h3 className="text-xl text-primary tracking-tight">
+                  <h3 className="text-xl text-brand tracking-tight">
                     {area.title}
                   </h3>
                   <ChevronRightIcon

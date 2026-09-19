@@ -1,89 +1,84 @@
 export const facultyStudentsData: FacultyMember[] = [
   {
-    name: "Wei Chen",
-    title: "PhD student (Sebastian Jaimungal & Xiaofei Shi)",
-    image: "#",
-    bio: "Stochastic control.",
+    name: "Qinghua Ren",
+    title: "Postdoctoral researcher (Silvana Pesenti)",
+    since: 2026,
+    image: "",
+    bio: "",
     links: {
-      email: "weich.chen@mail.utoronto.ca",
-      website: "#",
+      email: "qinghua.ren@utoronto.ca",
+      website: "https://qinghua-ren.github.io/",
     },
   },
-
   {
     name: "Vedant Choudhary",
     title: "PhD student (Sebastian Jaimungal)",
+    since: 2021,
     image: "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=QF2q72kAAAAJ&citpid=1",
     bio: "Generative modelling of financial time series data.",
     links: {
       email: "vedant.choudhary@mail.utoronto.ca",
-      website: "https://scholar.google.ca/citations?user=QF2q72kAAAAJ&hl=en",
+      googleScholar: "https://scholar.google.ca/citations?user=QF2q72kAAAAJ&hl=en",
+      linkedin: "https://ca.linkedin.com/in/vedantch",
     },
   },
-  
-  {
-    name: "Elijah French",
-    title: "PhD student (Sebastian Jaimungal & Leonard Wong)",
-    image: "https://elijahfrench.com/authors/admin/avatar_hu11996f62648c715c114d0c98a7d1bbd4_310207_270x270_fill_q75_lanczos_center.jpg",
-    bio: "Mean-field games.",
-    links: {
-      email: "elijah.french@mail.utoronto.ca",
-      website: "https://elijahfrench.com/",
-    },
-  },
-
-  {
-    name: "Madhu Gunasingam",
-    title: "PhD student (Leonard Wong)",
-    image: "#",
-    bio: "Adapted optimal transport.",
-    links: {
-      email: "madhu.gunasingam@mail.utoronto.ca",
-      website: "https://www.linkedin.com/in/madhu-gunasingam-ab0880112/?originalSubdomain=ca",
-    },
-  },  
-
   {
     name: "Kathleen Miao",
     title: "PhD student (Silvana Pesenti)",
-    image: "https://lh4.googleusercontent.com/c_Bn58_l_72GX_XBGSuyAme_sFjwpX5J55Q7Z3RrUAYBz-TWSkIXbDrN-jp-zEkwpVMJF1fiI-DXUKie61KF-TPVSQKLcd_C08aOsbiFYHTM52vFCiLrbNxNJf37MAXWiA=w1280",
+    since: 2021,
+    image: "",
     bio: "Mathematical problems in insurance and risk management, dependence uncertainty, and robustness.",
     links: {
       email: "k.miao@mail.utoronto.ca",
       website: "https://www.kathleenmiao.ca/",
+      googleScholar: "https://scholar.google.ca/citations?user=1iTfxR4AAAAJ&hl=en",
+      linkedin: "https://www.linkedin.com/in/kathleen-m-7ba9411b5/",
     },
-  },  
-
+  },
   {
     name: "Brandon Tam",
     title: "PhD student (Silvana Pesenti)",
+    since: 2023,
     image: "https://brandon-tam.github.io//images/Convocation%20-%20Individual%20Photo.jpg",
     bio: "Multivariate uncertainty sets and distributionally robust optimization.",
     links: {
       email: "brandontam.tam@mail.utoronto.ca",
       website: "https://brandon-tam.github.io/",
+      googleScholar: "https://scholar.google.ca/citations?user=lag1zpMAAAAJ&hl=en",
+      linkedin: "https://www.linkedin.com/in/brandon-tam-b459861b6",
     },
   },
-  
-
   {
-    name: "Xuchen Wu",
-    title: "PhD student (Sebastian Jaimungal)",
-    image: "#",
-    bio: "Partial information principal-agent problems.",
+    name: "Elijah French",
+    title: "PhD student (Sebastian Jaimungal & Leonard Wong)",
+    since: 2024,
+    image: "",
+    bio: "Mean-field games.",
     links: {
-      email: "xuchen.wu@mail.utoronto.ca",
-      website: "",
+      email: "elijah.french@mail.utoronto.ca",
+      website: "https://elijahfrench.com/",
+      linkedin: "https://www.linkedin.com/in/elijah-french/",
     },
   },
   {
-    name: "Isaac Marchand",
-    title: "PhD student (Xiaofei Shi & Christopher Blier-Wong)",
-    since: 2026,
+    name: "Mathew Cater",
+    title: "PhD student (Sebastian Jaimungal)",
+    since: 2024,
     image: "",
     bio: "",
     links: {
-      email: "isaac.marchand@mail.utoronto.ca",
+      linkedin: "https://ca.linkedin.com/in/mathew-cater-benavides",
+    },
+  },
+  {
+    name: "Brian Ceco",
+    title: "PhD student (Leonard Wong & Xiaofei Shi)",
+    since: 2024,
+    image: "",
+    bio: "",
+    links: {
+      website: "https://brianceco.wordpress.com/",
+      linkedin: "https://ca.linkedin.com/in/brian-ceco",
     },
   },
   {
@@ -97,14 +92,57 @@ export const facultyStudentsData: FacultyMember[] = [
     },
   },
   {
-    name: "Qinhua Ren",
-    title: "Postdoctoral researcher (Silvana Pesenti)",
+    name: "Shang Li",
+    title: "PhD student (Sebastian Jaimungal & Wenlong Mou)",
+    since: 2025,
+    image: "",
+    bio: "",
+    links: {},
+  },
+  {
+    name: "Zhe Zhou",
+    title: "PhD student (Dena Firoozi)",
+    since: 2025,
+    image: "",
+    bio: "",
+    links: {},
+  },
+  {
+    name: "Denis Khatnyuk",
+    title: "PhD student (Sebastian Jaimungal)",
     since: 2026,
     image: "",
     bio: "",
     links: {
-      email: "qinghua.ren@utoronto.ca",
-      website: "https://qinghua-ren.github.io/",
+      linkedin: "https://ca.linkedin.com/in/dkhatnyuk",
+    },
+  },
+  {
+    name: "Terrence Allder",
+    title: "PhD student (Sebastian Jaimungal & Silvana Pesenti)",
+    since: 2026,
+    image: "",
+    bio: "",
+    links: {
+      linkedin: "https://ca.linkedin.com/in/terrenceallder",
+    },
+  },
+  {
+    name: "Aiden Boyle",
+    title: "PhD student (Sebastian Jaimungal & Dena Firoozi)",
+    since: 2026,
+    image: "",
+    bio: "",
+    links: {},
+  },
+  {
+    name: "Isaac Marchand",
+    title: "PhD student (Xiaofei Shi & Christopher Blier-Wong)",
+    since: 2026,
+    image: "",
+    bio: "",
+    links: {
+      email: "isaac.marchand@mail.utoronto.ca",
     },
   },
 ];

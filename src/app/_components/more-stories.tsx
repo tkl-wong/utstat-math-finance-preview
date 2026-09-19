@@ -17,7 +17,7 @@ export function MoreStories({ posts }: Props) {
         </h2>
         <Link
           href="/news"
-          className="group inline-flex items-center gap-2 text-primary hover:text-primary-focus transition-colors duration-300"
+          className="group inline-flex items-center gap-2 text-brand hover:text-brand/80 transition-colors duration-300"
         >
           <span className="font-medium">View All</span>
           <ArrowRightIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />

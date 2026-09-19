@@ -2,16 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-:root, [data-theme] {
-  @apply bg-base-200 text-base-content;
+:root {
+  --color-accent-rgb: 0, 127, 163;
+  @apply bg-gray-50 text-gray-900;
 }
 
 html {
-  @apply bg-base-200 text-base-content h-full;
+  @apply bg-gray-50 text-gray-900 h-full;
 }
 
 body {
-  @apply bg-base-200 text-base-content h-full;
+  @apply bg-gray-50 text-gray-900 h-full;
 }
 
 a.anchor {
@@ -121,9 +122,9 @@ a.anchor {
 
 /* Custom Shadows */
 .shadow-glow {
-  box-shadow: 0 0 20px rgba(var(--color-secondary-rgb), 0.2);
+  box-shadow: 0 0 20px rgba(var(--color-accent-rgb), 0.2);
 }
 
 .shadow-glow:hover {
-  box-shadow: 0 0 30px rgba(var(--color-secondary-rgb), 0.3);
+  box-shadow: 0 0 30px rgba(var(--color-accent-rgb), 0.3);
 }

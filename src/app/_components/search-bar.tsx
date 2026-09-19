@@ -12,7 +12,7 @@ export const SearchBar = ({ placeholder, onSearch, value }: FAQSearchProps) => {
       <input
         type="text"
         placeholder={placeholder}
-        className="input input-lg input-bordered w-full"
+        className="h-12 w-full rounded-lg border border-gray-300 bg-white px-4 pr-12 text-gray-900 outline-none transition-colors placeholder:text-gray-500 focus:border-brand focus:ring-2 focus:ring-brand/20"
         onChange={(e) => onSearch(e.target.value)}
         value={value || ""}
       />

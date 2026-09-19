@@ -2,47 +2,44 @@
 import React, { useMemo, useState } from "react";
 import { PublicationFilters } from "../_components/publication-filters";
 import { PublicationList } from "../_components/publication-list";
-import { publicationsData } from "@/contents/publications";
-import { BookOpenIcon, AcademicCapIcon } from "@heroicons/react/24/outline";
+import { publicationKeywordOptions, publicationsData } from "@/contents/publications";
+import { facultyMembersData } from "@/contents/faculty-members";
+import { BookOpenIcon } from "@heroicons/react/24/outline";
 
 const PublicationsSection = () => {
   const [selectedFilters, setSelectedFilters] = useState<PublicationFilters>({
-    venue: [],
-    tags: [],
+    faculty: [],
+    keywords: [],
     search: "",
   });
 
   const filterOptions = useMemo(() => {
-    const options = { venue: new Set<string>(), tags: new Set<string>() };
-
-    publicationsData.forEach((pub) => {
-      if (pub.venue) options.venue.add(pub.venue);
-      if (pub.tags) pub.tags.forEach((tag) => options.tags.add(tag));
-    });
-
     return {
-      venue: Array.from(options.venue),
-      tags: Array.from(options.tags),
+      faculty: facultyMembersData.map((faculty) => faculty.name),
+      keywords: publicationKeywordOptions,
     };
   }, []);
 
   const filteredPublications = useMemo(() => {
     return publicationsData.filter((pub) => {
-      const matchesVenue =
-        selectedFilters.venue.length === 0 ||
-        selectedFilters.venue.includes(pub.venue);
+      const matchesFaculty =
+        selectedFilters.faculty.length === 0 ||
+        selectedFilters.faculty.some((faculty) => pub.authors.includes(faculty));
 
-      const matchesTags =
-        selectedFilters.tags.length === 0 ||
-        selectedFilters.tags.some((tag) => pub.tags.includes(tag));
+      const matchesKeywords =
+        selectedFilters.keywords.length === 0 ||
+        selectedFilters.keywords.some((keyword) => pub.tags.includes(keyword));
 
       const matchesSearch =
         pub.title.toLowerCase().includes(selectedFilters.search.toLowerCase()) ||
         pub.authors.some((author) =>
           author.toLowerCase().includes(selectedFilters.search.toLowerCase())
+        ) ||
+        pub.tags.some((tag) =>
+          tag.toLowerCase().includes(selectedFilters.search.toLowerCase())
         );
 
-      return matchesVenue && matchesTags && matchesSearch;
+      return matchesFaculty && matchesKeywords && matchesSearch;
     });
   }, [selectedFilters, publicationsData]);
 
@@ -72,30 +69,30 @@ const PublicationsSection = () => {
 
   const handleClearFilters = () => {
     setSelectedFilters({
-      venue: [],
-      tags: [],
+      faculty: [],
+      keywords: [],
       search: "",
     });
   };
   
   return (
-    <main className="min-h-screen bg-base-200">
+    <main className="min-h-screen bg-gray-50">
       {/* Header Section */}
       <section className="relative py-24 overflow-hidden mb-12">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.07] to-transparent" />
-          <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-base-300 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-br from-brand/[0.07] to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
         </div>
         
         <div className="container mx-auto px-6 relative">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary mb-8 rotate-3 hover:rotate-0 transition-transform duration-300">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-brand/10 text-brand mb-8 rotate-3 hover:rotate-0 transition-transform duration-300">
               <BookOpenIcon className="w-8 h-8" />
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-base-content via-primary to-base-content/80 bg-clip-text text-transparent">
+            <h1 className="mb-6 text-4xl font-bold text-gray-900 md:text-5xl">
               Research Publications
             </h1>
-            <p className="text-base-content/70 text-lg leading-relaxed">
+            <p className="text-gray-600 text-lg leading-relaxed">
               Explore our contributions to mathematical finance, featuring groundbreaking research 
               in stochastic analysis, financial mathematics, and computational methods.
             </p>
@@ -121,19 +118,11 @@ const PublicationsSection = () => {
 
           {/* Publications List */}
           <div>
-            <div className="flex items-center justify-between mb-6">
-              <div className="text-base-content/70">
-                Showing <span className="font-medium text-base-content">{filteredPublications.length}</span> publications
+            <div className="mb-6">
+              <div className="text-gray-600">
+                Showing <span className="font-medium text-gray-900">{filteredPublications.length}</span>{" "}
+                {filteredPublications.length === 1 ? "publication" : "publications"}
               </div>
-              <a 
-                href="https://scholar.google.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-primary hover:text-primary-focus transition-colors"
-              >
-                <AcademicCapIcon className="w-5 h-5" />
-                <span className="font-medium">Google Scholar</span>
-              </a>
             </div>
             <PublicationList groupedByYear={groupedByYear} />
           </div>

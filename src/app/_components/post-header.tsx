@@ -17,7 +17,7 @@ export function PostHeader({ title, coverImage, date }: Props) {
       <div className="mb-8">
         <Link 
           href="/news" 
-          className="inline-flex items-center text-gray-600 hover:text-primary transition-colors duration-300"
+          className="inline-flex items-center text-gray-600 hover:text-brand transition-colors duration-300"
         >
           <ArrowLeftIcon className="w-4 h-4 mr-2" />
           <span>Back to News</span>
@@ -26,7 +26,7 @@ export function PostHeader({ title, coverImage, date }: Props) {
 
       {/* Title and Meta */}
       <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 bg-gradient-to-r from-gray-900 via-primary to-gray-700 dark:from-white dark:via-primary-light dark:to-gray-300 bg-clip-text text-transparent">
+        <h1 className="mb-6 text-4xl font-bold leading-tight text-gray-900 md:text-5xl lg:text-6xl">
           {title}
         </h1>
         
@@ -49,8 +49,8 @@ export function PostHeader({ title, coverImage, date }: Props) {
       </div>
 
       {/* Decorative Elements */}
-      <div className="absolute -inset-x-4 top-0 h-96 bg-gradient-to-b from-primary/5 to-transparent -z-10 blur-3xl" />
-      <div className="absolute -inset-x-4 bottom-0 h-96 bg-gradient-to-t from-secondary/5 to-transparent -z-10 blur-3xl" />
+      <div className="absolute -inset-x-4 top-0 h-96 bg-gradient-to-b from-brand/5 to-transparent -z-10 blur-3xl" />
+      <div className="absolute -inset-x-4 bottom-0 h-96 bg-gradient-to-t from-accent/5 to-transparent -z-10 blur-3xl" />
     </div>
   );
 }

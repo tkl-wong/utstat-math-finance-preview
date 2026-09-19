@@ -4,13 +4,17 @@ import { ResearchArea } from '@/contents/research-areas';
 import { ResearchAreaCard } from './research-area-card';
 
 export function ResearchAreasGrid({ areas }: { areas: ResearchArea[] }) {
+  const alphabeticalAreas = [...areas].sort((a, b) =>
+    a.title.localeCompare(b.title)
+  );
+
   return (
     <section className="py-12">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {areas.map((area) => (
+      <div className="space-y-8">
+        {alphabeticalAreas.map((area) => (
           <ResearchAreaCard key={area.slug} area={area} />
         ))}
       </div>
     </section>
   );
-} 
+}

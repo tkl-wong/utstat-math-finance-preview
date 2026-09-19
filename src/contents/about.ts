@@ -2,12 +2,8 @@ export interface Mission {
   title: string;
   description: string;
   iconPath: string;
-}
-
-export interface Metric {
-  value: string;
-  label: string;
-  iconPath: string;
+  href?: string;
+  linkLabel?: string;
 }
 
 export interface AboutContent {
@@ -17,17 +13,6 @@ export interface AboutContent {
     description: string;
   };
   missions: Mission[];
-  vision: {
-    statement: string;
-  };
-  metrics: Metric[];
-  showcase: {
-    image: {
-      src: string;
-      alt: string;
-    };
-    caption: string;
-  };
 }
 
 export const aboutContent: AboutContent = {
@@ -38,41 +23,32 @@ export const aboutContent: AboutContent = {
   },
   missions: [
     {
-      title: "Build Excellence",
-      description: "Develop cutting-edge mathematical models and computational methods to solve complex financial challenges.",
-      iconPath: "M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+      title: "Faculty Expertise",
+      description: "Our faculty are experts in mathematical finance, stochastic control, risk, insurance, and related fields.",
+      iconPath: "M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z",
+      href: "/people#faculty-members",
+      linkLabel: "Meet Our Faculty"
     },
     {
-      title: "Drive Innovation",
-      description: "Partner with industry leaders to transform theoretical breakthroughs into practical financial solutions.",
-      iconPath: "M13 10V3L4 14h7v7l9-11h-7z"
+      title: "Research Excellence",
+      description: "We develop mathematical, statistical, and computational methods for problems in finance, insurance, and risk.",
+      iconPath: "M13 10V3L4 14h7v7l9-11h-7z",
+      href: "/publications",
+      linkLabel: "Explore Recent Publications"
     },
     {
       title: "Foster Talent",
       description: "Nurture the next generation of mathematical finance experts through world-class research and collaboration.",
-      iconPath: "M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
-    }
-  ],
-  vision: {
-    statement: "Our research group works at the intersection of mathematics, finance, and technology. Through rigorous research and interdisciplinary collaboration, we develop computational methods and analytical frameworks that help shape the future of financial markets."
-  },
-  metrics: [
-    {
-      value: "25+",
-      label: "Research Projects",
-      iconPath: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+      iconPath: "M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z",
+      href: "/people#phd-students-postdocs",
+      linkLabel: "See Our Group"
     },
     {
-      value: "150+",
-      label: "Publications",
-      iconPath: "M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
+      title: "Teach at Every Level",
+      description: "Teach and mentor students across undergraduate, graduate, and professional programs. Many of our members contribute to the Master of Financial Insurance (MFI) program.",
+      iconPath: "M12 14l9-5-9-5-9 5 9 5zm0 0v6m-6-9v5c3 2 9 2 12 0v-5",
+      href: "https://www.statistics.utoronto.ca/MFI",
+      linkLabel: "Explore the MFI Program"
     }
-  ],
-  showcase: {
-   image: {
-      src: "https://quanteam.fr/wp-content/uploads/HEADER1-3.png",
-      alt: "Our research facility showcasing advanced mathematical finance research"
-    },
-    caption: "State-of-the-art research facilities equipped with advanced computational resources"
-  }
+  ]
 }; 

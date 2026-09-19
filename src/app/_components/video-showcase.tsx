@@ -20,16 +20,16 @@ export function VideoShowcase({ videos }: VideoShowcaseProps) {
   const [selectedVideo, setSelectedVideo] = useState<Video | null>(null);
 
   return (
-    <section className="py-24 bg-base-200/50">
+    <section className="py-24 bg-gray-50/50">
       <a className="anchor" id="media"></a>
       
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-16 space-y-4">
-          <h2 className="text-4xl font-bold tracking-tight text-base-content">
+          <h2 className="text-4xl font-bold tracking-tight text-gray-900">
             Featured Videos
           </h2>
-          <p className="text-xl text-base-content/70">
+          <p className="text-xl text-gray-600">
             Watch our latest talks, interviews, and research presentations from leading experts in mathematical finance.
           </p>
         </div>
@@ -40,31 +40,31 @@ export function VideoShowcase({ videos }: VideoShowcaseProps) {
             <button
               type="button"
               key={video.id}
-              className="group grid w-full overflow-hidden rounded-2xl border border-base-300 bg-base-100 text-left shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 md:grid-cols-[minmax(260px,0.9fr)_minmax(0,1.1fr)]"
+              className="group grid w-full overflow-hidden rounded-2xl border border-gray-200 bg-white text-left shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 md:grid-cols-[minmax(260px,0.9fr)_minmax(0,1.1fr)]"
               onClick={() => setSelectedVideo(video)}
               aria-label={`Watch ${video.title}`}
             >
-              <div className="relative aspect-video overflow-hidden bg-base-300">
+              <div className="relative aspect-video overflow-hidden bg-gray-200">
                 <img
                   src={video.thumbnailUrl}
                   alt=""
                   className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-black/5 transition-colors duration-300 group-hover:bg-black/15">
-                  <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white/95 text-primary shadow-lg transition-transform duration-300 group-hover:scale-105">
+                  <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white/95 text-brand shadow-lg transition-transform duration-300 group-hover:scale-105">
                     <PlayIcon className="ml-1 h-7 w-7" />
                   </span>
                 </div>
               </div>
 
               <div className="flex flex-col justify-center p-6 md:p-8">
-                <h3 className="mb-3 text-2xl font-semibold tracking-tight text-base-content">
+                <h3 className="mb-3 text-2xl font-semibold tracking-tight text-gray-900">
                   {video.title}
                 </h3>
-                <p className="text-base leading-relaxed text-base-content/70">
+                <p className="text-base leading-relaxed text-gray-600">
                   {video.description}
                 </p>
-                <span className="mt-5 inline-flex items-center gap-2 font-medium text-primary">
+                <span className="mt-5 inline-flex items-center gap-2 font-medium text-brand">
                   <PlayIcon className="h-4 w-4" />
                   Watch video
                 </span>
