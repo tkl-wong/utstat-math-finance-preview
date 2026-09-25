@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  basePath: "/utstat-math-finance",
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH || "/utstat-math-finance",
   output: "export",
   images: {
     unoptimized: true,
