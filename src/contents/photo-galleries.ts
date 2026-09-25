@@ -16,25 +16,25 @@ export const researchRetreatGallery: PhotoGalleryContent = {
   details: "March 2025 · Niagara-on-the-Lake, Ontario",
   photos: [
     {
-      src: "/utstat-math-finance/assets/gallery/math-finance-retreat-2025/lakeside-group.jpeg",
+      src: "/assets/gallery/math-finance-retreat-2025/lakeside-group.jpeg",
       alt: "Math Finance research retreat participants gathered by the lakeshore",
       width: 2400,
       height: 1600,
     },
     {
-      src: "/utstat-math-finance/assets/gallery/math-finance-retreat-2025/niagara-falls-group.jpeg",
+      src: "/assets/gallery/math-finance-retreat-2025/niagara-falls-group.jpeg",
       alt: "Math Finance research retreat participants visiting Niagara Falls",
       width: 2400,
       height: 1600,
     },
     {
-      src: "/utstat-math-finance/assets/gallery/math-finance-retreat-2025/retreat-group.jpeg",
+      src: "/assets/gallery/math-finance-retreat-2025/retreat-group.jpeg",
       alt: "Participants at the Math Finance research retreat",
       width: 2400,
       height: 825,
     },
     {
-      src: "/utstat-math-finance/assets/gallery/math-finance-retreat-2025/research-session.jpeg",
+      src: "/assets/gallery/math-finance-retreat-2025/research-session.jpeg",
       alt: "A presentation during the Math Finance research retreat",
       width: 2400,
       height: 1330,

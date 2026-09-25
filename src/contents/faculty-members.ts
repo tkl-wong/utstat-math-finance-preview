@@ -15,7 +15,7 @@ export const facultyMembersData: FacultyMember[] = [
   {
     name: "Ting-Kam Leonard Wong",
     title: "Associate Professor",
-    image: "/utstat-math-finance/assets/members/LeonardWong.jpg",
+    image: "/assets/members/LeonardWong.jpg",
     imagePosition: "center top",
     bio: "Robust portfolio theory, probability, optimal transport and information geometry.",
     links: {
@@ -28,7 +28,7 @@ export const facultyMembersData: FacultyMember[] = [
   {
     name: "Silvana Pesenti",
     title: "Associate Professor",
-    image: "/utstat-math-finance/assets/members/SilvanaPesenti.jpg",
+    image: "/assets/members/SilvanaPesenti.jpg",
     imagePosition: "center top",
     bio: "Quantitative risk management, dependence uncertainty, sensitivity analysis for insurance, risk measures, stress testing and systemic risk.",
     links: {
@@ -54,7 +54,7 @@ export const facultyMembersData: FacultyMember[] = [
   {
     name: "Xiaofei Shi",
     title: "Assistant Professor",
-    image: "/utstat-math-finance/assets/members/XiaofeiShi.jpg",
+    image: "/assets/members/XiaofeiShi.jpg",
     imagePosition: "center 5%",
     bio: "Stochastic optimization and stochastic differential equations with applications to mathematical finance.",
     links: {

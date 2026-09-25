@@ -11,7 +11,7 @@ export const featuredVideos: Video[] = [
     id: "1",
     title: "Reinforcement and mean-field games in algorithmic trading - Sebastian Jaimungal",
     description: "Talk at the Alan Turing Institute on two areas of his research in algorithmic trading: reinforcement learning and mean-field games with differing beliefs. ",
-    thumbnailUrl: "/utstat-math-finance/assets/videos/reinforcement.jpeg",
+    thumbnailUrl: "/assets/videos/reinforcement.jpeg",
     youtubeId: "F1bO2QvrAb8"
   },
   {
