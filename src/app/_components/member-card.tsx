@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { EnvelopeIcon, GlobeAltIcon, AcademicCapIcon } from '@heroicons/react/24/outline';
+import { imagePath } from '@/lib/image-path';
 
 const LinkedInIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -37,7 +38,7 @@ export const MemberCard = ({ member, variant = 'faculty' }: { member: FacultyMem
             <div className="absolute inset-0">
               {hasImage ? (
                 <Image
-                  src={member.image}
+                  src={imagePath(member.image)}
                   alt={member.name}
                   fill
                   className="object-cover object-center"
@@ -148,7 +149,7 @@ export const MemberCard = ({ member, variant = 'faculty' }: { member: FacultyMem
             <div className="relative w-[72px] h-[72px] rounded-lg overflow-hidden flex-shrink-0">
               {hasImage ? (
                 <Image
-                  src={member.image}
+                  src={imagePath(member.image)}
                   alt={member.name}
                   fill
                   className="object-cover object-center"

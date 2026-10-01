@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { PlayIcon } from "@heroicons/react/24/solid";
 import { XMarkIcon } from "@heroicons/react/24/outline";
+import { imagePath } from "@/lib/image-path";
 
 interface Video {
   id: string;
@@ -46,7 +47,7 @@ export function VideoShowcase({ videos }: VideoShowcaseProps) {
             >
               <div className="relative aspect-video overflow-hidden bg-gray-200">
                 <img
-                  src={video.thumbnailUrl}
+                  src={imagePath(video.thumbnailUrl)}
                   alt=""
                   className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
                 />

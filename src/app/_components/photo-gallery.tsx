@@ -7,6 +7,7 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import type { PhotoGalleryContent } from "@/contents/photo-galleries";
+import { imagePath } from "@/lib/image-path";
 
 interface PhotoGalleryProps {
   gallery: PhotoGalleryContent;
@@ -87,7 +88,7 @@ export function PhotoGallery({ gallery }: PhotoGalleryProps) {
               aria-label={`Open photo ${index + 1} of ${gallery.photos.length}`}
             >
               <img
-                src={photo.src}
+                src={imagePath(photo.src)}
                 alt={photo.alt}
                 loading="lazy"
                 className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.015] group-hover:brightness-95"
@@ -131,7 +132,7 @@ export function PhotoGallery({ gallery }: PhotoGalleryProps) {
             onClick={(event) => event.stopPropagation()}
           >
             <img
-              src={selectedPhoto.src}
+              src={imagePath(selectedPhoto.src)}
               alt={selectedPhoto.alt}
               className="max-h-[82vh] max-w-full rounded-xl object-contain shadow-2xl"
             />

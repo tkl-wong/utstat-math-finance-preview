@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
+import { imagePath } from '@/lib/image-path';
 
 export const StudentCard = ({ student }: { student: FacultyMember }) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -13,7 +14,7 @@ export const StudentCard = ({ student }: { student: FacultyMember }) => {
         {/* Avatar */}
         <div className="relative w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
           <Image
-            src={student.image}
+            src={imagePath(student.image)}
             alt={student.name}
             fill
             className="object-cover"

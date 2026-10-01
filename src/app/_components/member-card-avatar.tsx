@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { imagePath } from "@/lib/image-path";
 
 export function MemberCardAvatar({
   image,
@@ -14,7 +15,7 @@ export function MemberCardAvatar({
       <div className="w-48 h-48 rounded-full overflow-hidden mb-4 ring-2 ring-brand/5 hover:shadow-xl transition-shadow">
         <Link href={profileLink}>
           <img
-            src={image}
+            src={imagePath(image)}
             alt={altText}
             className="w-full h-full object-cover"
           />
