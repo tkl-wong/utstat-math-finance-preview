@@ -30,11 +30,11 @@ export const heroContent: HeroContent = {
   },
   description: "The mathematical finance group at the University of Toronto is one of the largest in North America. We conduct cutting-edge research at the intersection of theory and application, and train the next generations of talents in academia and industry.",
   background: {
-    imagePath: "/assets/hero/university-of-toronto-sign.jpg"
+    imagePath: "/assets/hero/department-statistical-sciences.jpg"
   },
   foregroundImage: {
-    imagePath: "/assets/hero/math-finance-group-niagara.jpeg",
-    alt: "Members of the mathematical finance group at Niagara Falls"
+    imagePath: "/assets/gallery/math-finance-retreat-2026/group-photo.jpg",
+    alt: "Faculty, postdoctoral fellows, and students at the 2026 Math Finance research retreat in the Blue Mountains"
   },
   cta: {
     primary: {

@@ -2,8 +2,10 @@ export const facultyMembersData: FacultyMember[] = [
   {
     name: "Sebastian Jaimungal",
     title: "Professor and Department Chair",
-    image:
-      "https://sebastian.statistics.utoronto.ca/wp-content/uploads/2022/10/Sebastian_Jaimungal-1-300x203.jpg",
+    image: "/utstat-math-finance/assets/members/SebastianJaimungal.jpg",
+    imagePosition: "62% center",
+    imageScale: 1.55,
+    imageTransformOrigin: "center 28%",
     bio: "Stochastic control and games, reinforcement learning, machine learning, clean energy, and algorithmic trading and other applications in mathematical finance.",
     links: {
       email: "sebastian.jaimungal@utoronto.ca",
@@ -17,7 +19,7 @@ export const facultyMembersData: FacultyMember[] = [
     title: "Associate Professor",
     image: "/utstat-math-finance/assets/members/LeonardWong.jpg",
     imagePosition: "center top",
-    bio: "Robust portfolio theory, probability, optimal transport and information geometry.",
+    bio: "Portfolio theory, optimal transport, information geometry, stochastic processes, statistical methodology, probability, and mathematical finance.",
     links: {
       email: "tkl.wong@utoronto.ca",
       website: "https://tkl-wong.github.io/",
@@ -30,7 +32,7 @@ export const facultyMembersData: FacultyMember[] = [
     title: "Associate Professor",
     image: "/utstat-math-finance/assets/members/SilvanaPesenti.jpg",
     imagePosition: "center top",
-    bio: "Quantitative risk management, dependence uncertainty, sensitivity analysis for insurance, risk measures, stress testing and systemic risk.",
+    bio: "Actuarial science, quantitative risk management, risk measures, dependence uncertainty, stress testing, systemic risk, and insurance.",
     links: {
       email: "silvana.pesenti@utoronto.ca",
       website: "https://pesenti.utstat.utoronto.ca/",
@@ -43,7 +45,7 @@ export const facultyMembersData: FacultyMember[] = [
     title: "Assistant Professor",
     image: "https://denafiroozi.github.io/DF/images/profile.png",
     imagePosition: "center top",
-    bio: "Stochastic control and mean field games, and their applications in finance.",
+    bio: "Mean-field games, stochastic control, stochastic analysis, systemic risk, risk-sensitive decision-making, and applications in finance.",
     links: {
       email: "dena.firoozi@hec.ca",
       website: "https://denafiroozi.github.io/DF/",
@@ -56,12 +58,25 @@ export const facultyMembersData: FacultyMember[] = [
     title: "Assistant Professor",
     image: "/utstat-math-finance/assets/members/XiaofeiShi.jpg",
     imagePosition: "center 5%",
-    bio: "Stochastic optimization and stochastic differential equations with applications to mathematical finance.",
+    bio: "Stochastic optimization, stochastic differential equations, portfolio theory, transaction costs, machine learning, statistical methodology, and applications to mathematical finance.",
     links: {
       email: "xf.shi@utoronto.ca",
       website: "https://xf-shi.github.io/",
       googleScholar: "https://scholar.google.com/citations?user=83XDxwUAAAAJ&hl=en",
       linkedin: "https://ca.linkedin.com/in/xiaofei-shi-41808b273",
+    },
+  },
+  {
+    name: "Christopher Blier-Wong",
+    title: "Assistant Professor",
+    image: "/utstat-math-finance/assets/members/ChristopherBlierWong.jpg",
+    imagePosition: "center top",
+    bio: "Actuarial science, quantitative risk management, dependence modelling, risk sharing, decision theory, statistical methodology, and machine learning in insurance.",
+    links: {
+      email: "christopher.blierwong@utoronto.ca",
+      website: "https://chrisbw.ca/research/",
+      googleScholar: "https://scholar.google.com/citations?user=st1DkB8AAAAJ&hl=en",
+      linkedin: "https://ca.linkedin.com/in/christopher-blier-wong",
     },
   },
 ];

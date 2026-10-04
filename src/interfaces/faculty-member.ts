@@ -5,6 +5,8 @@ interface FacultyMember {
   bio: string;
   image: string;
   imagePosition?: string;
+  imageScale?: number;
+  imageTransformOrigin?: string;
   links: {
     email?: string;
     website?: string;

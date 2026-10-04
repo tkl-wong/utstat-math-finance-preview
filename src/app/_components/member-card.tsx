@@ -1,8 +1,15 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { EnvelopeIcon, GlobeAltIcon, AcademicCapIcon } from '@heroicons/react/24/outline';
+import {
+  AcademicCapIcon,
+  ArrowTopRightOnSquareIcon,
+  EnvelopeIcon,
+  GlobeAltIcon,
+  XMarkIcon,
+} from '@heroicons/react/24/outline';
+import { publicationsData } from '@/contents/publications';
 
 const LinkedInIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -13,6 +20,7 @@ const LinkedInIcon = ({ className }: { className?: string }) => (
 export const MemberCard = ({ member, variant = 'faculty' }: { member: FacultyMember, variant?: 'faculty' | 'student' }) => {
   const isFaculty = variant === 'faculty';
   const [imageFailed, setImageFailed] = useState(false);
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
   const hasImage = Boolean(member.image && member.image !== '#' && !imageFailed);
   const initials = member.name
     .split(' ')
@@ -20,10 +28,33 @@ export const MemberCard = ({ member, variant = 'faculty' }: { member: FacultyMem
     .join('')
     .slice(0, 2);
 
+  const recentPublications = publicationsData
+    .filter((publication) => publication.authors.includes(member.name))
+    .sort((a, b) => b.publishedAt.getTime() - a.publishedAt.getTime())
+    .slice(0, 3);
+
+  useEffect(() => {
+    if (!isProfileOpen) return;
+
+    const previousOverflow = document.body.style.overflow;
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setIsProfileOpen(false);
+    };
+
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isProfileOpen]);
+
   if (isFaculty) {
     return (
-      <div className="h-full">
-        <div className="
+      <>
+        <div className="h-full">
+          <div className="
           relative bg-white
           rounded-xl overflow-hidden
           border border-gray-100 dark:border-gray-800
@@ -31,9 +62,14 @@ export const MemberCard = ({ member, variant = 'faculty' }: { member: FacultyMem
           hover:border-brand/20
           hover:shadow-lg hover:shadow-gray-100/20 dark:hover:shadow-black/20
           h-full flex flex-col
-        ">
-          {/* Image Section - Fixed aspect ratio */}
-          <div className="relative w-full pt-[75%]">
+          ">
+          {/* Portrait image area */}
+          <button
+            type="button"
+            onClick={() => setIsProfileOpen(true)}
+            className="group/image relative aspect-[3/4] w-full overflow-hidden text-left"
+            aria-label={`View profile details for ${member.name}`}
+          >
             <div className="absolute inset-0">
               {hasImage ? (
                 <Image
@@ -41,7 +77,11 @@ export const MemberCard = ({ member, variant = 'faculty' }: { member: FacultyMem
                   alt={member.name}
                   fill
                   className="object-cover object-center"
-                  style={{ objectPosition: member.imagePosition ?? 'center' }}
+                  style={{
+                    objectPosition: member.imagePosition ?? 'center',
+                    transform: member.imageScale ? `scale(${member.imageScale})` : undefined,
+                    transformOrigin: member.imageTransformOrigin ?? 'center',
+                  }}
                   sizes="(min-width: 1280px) 420px, (min-width: 1024px) 380px, (min-width: 768px) 50vw, 100vw"
                   onError={() => setImageFailed(true)}
                 />
@@ -52,6 +92,7 @@ export const MemberCard = ({ member, variant = 'faculty' }: { member: FacultyMem
               )}
               {/* Gradient Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+              <div className="absolute inset-0 bg-black/0 transition-colors group-hover/image:bg-black/10" />
               
               {/* Content Overlay */}
               <div className="absolute bottom-0 left-0 right-0 p-6">
@@ -65,7 +106,7 @@ export const MemberCard = ({ member, variant = 'faculty' }: { member: FacultyMem
                 </div>
               </div>
             </div>
-          </div>
+          </button>
 
           {/* Content Section */}
           <div className="flex-1 flex flex-col p-6">
@@ -125,8 +166,146 @@ export const MemberCard = ({ member, variant = 'faculty' }: { member: FacultyMem
               </div>
             </div>
           </div>
+          </div>
         </div>
-      </div>
+        {isProfileOpen && (
+          <div
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby={`faculty-profile-${member.name.replace(/\s+/g, '-').toLowerCase()}`}
+          >
+            <button
+              type="button"
+              className="absolute inset-0 bg-slate-950/65 backdrop-blur-sm"
+              onClick={() => setIsProfileOpen(false)}
+              aria-label="Close faculty profile"
+            />
+
+          <div className="relative z-10 max-h-[90vh] w-full max-w-4xl overflow-y-auto rounded-2xl bg-white shadow-2xl">
+            <button
+              type="button"
+              onClick={() => setIsProfileOpen(false)}
+              className="absolute right-4 top-4 z-20 rounded-full bg-white/90 p-2 text-gray-700 shadow-md transition hover:bg-white hover:text-gray-950"
+              aria-label="Close faculty profile"
+            >
+              <XMarkIcon className="h-5 w-5" />
+            </button>
+
+            <div className="grid md:grid-cols-[360px_1fr]">
+              <div className="relative aspect-[3/4] overflow-hidden bg-gray-100 md:aspect-auto md:min-h-[480px]">
+                {hasImage ? (
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover"
+                    style={{
+                      objectPosition: member.imagePosition ?? 'center',
+                      transform: member.imageScale ? `scale(${member.imageScale})` : undefined,
+                      transformOrigin: member.imageTransformOrigin ?? 'center',
+                    }}
+                    sizes="(min-width: 768px) 320px, 100vw"
+                  />
+                ) : (
+                  <div className="flex h-full min-h-[320px] items-center justify-center bg-brand/10 text-6xl font-semibold text-brand/70">
+                    {initials}
+                  </div>
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
+              </div>
+
+              <div className="p-7 sm:p-9">
+                <p className="mb-2 text-sm font-semibold uppercase tracking-[0.14em] text-brand">
+                  {member.title}
+                </p>
+                <h2
+                  id={`faculty-profile-${member.name.replace(/\s+/g, '-').toLowerCase()}`}
+                  className="text-3xl font-bold text-gray-950"
+                >
+                  {member.name}
+                </h2>
+
+                <div className="mt-6">
+                  <h3 className="text-sm font-semibold uppercase tracking-[0.12em] text-gray-500">
+                    Research interests
+                  </h3>
+                  <p className="mt-2 leading-relaxed text-gray-700">{member.bio}</p>
+                </div>
+
+                <div className="mt-8 border-t border-gray-200 pt-6">
+                  <h3 className="text-lg font-semibold text-gray-950">Recent publications</h3>
+                  {recentPublications.length > 0 ? (
+                    <ul className="mt-4 space-y-4">
+                      {recentPublications.map((publication) => {
+                        const href =
+                          publication.links.doi ??
+                          publication.links.publisher ??
+                          publication.links.proceeding ??
+                          publication.links.arxiv ??
+                          publication.links.ssrn;
+
+                        return (
+                          <li key={publication.id}>
+                            {href ? (
+                              <a
+                                href={href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group/link inline-flex items-start gap-2 font-medium leading-snug text-gray-900 transition-colors hover:text-brand"
+                              >
+                                <span>{publication.title}</span>
+                                <ArrowTopRightOnSquareIcon className="mt-0.5 h-4 w-4 flex-none opacity-60 transition group-hover/link:opacity-100" />
+                              </a>
+                            ) : (
+                              <p className="font-medium leading-snug text-gray-900">{publication.title}</p>
+                            )}
+                            <p className="mt-1 text-sm text-gray-500">
+                              {publication.venue} · {publication.publishedAt.getFullYear()}
+                            </p>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  ) : (
+                    <p className="mt-3 text-sm text-gray-500">Recent publications will be added soon.</p>
+                  )}
+                </div>
+
+                {(member.links.website || member.links.googleScholar) && (
+                  <div className="mt-7 flex flex-wrap gap-3 border-t border-gray-200 pt-6">
+                    {member.links.website && (
+                      <a
+                        href={member.links.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 rounded-lg border border-gray-200 px-4 py-2.5 text-sm font-semibold text-gray-800 transition hover:border-brand/40 hover:bg-brand/5 hover:text-brand"
+                      >
+                        <GlobeAltIcon className="h-4 w-4" />
+                        Personal website
+                        <ArrowTopRightOnSquareIcon className="h-3.5 w-3.5 opacity-60" />
+                      </a>
+                    )}
+                    {member.links.googleScholar && (
+                      <a
+                        href={member.links.googleScholar}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 rounded-lg border border-gray-200 px-4 py-2.5 text-sm font-semibold text-gray-800 transition hover:border-brand/40 hover:bg-brand/5 hover:text-brand"
+                      >
+                        <AcademicCapIcon className="h-4 w-4" />
+                        Google Scholar
+                        <ArrowTopRightOnSquareIcon className="h-3.5 w-3.5 opacity-60" />
+                      </a>
+                    )}
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+          </div>
+        )}
+      </>
     );
   }
 

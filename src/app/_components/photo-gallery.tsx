@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useId, useState } from "react";
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
@@ -14,6 +14,7 @@ interface PhotoGalleryProps {
 
 export function PhotoGallery({ gallery }: PhotoGalleryProps) {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const titleId = useId();
 
   const showPrevious = () => {
     setSelectedIndex((current) =>
@@ -62,16 +63,23 @@ export function PhotoGallery({ gallery }: PhotoGalleryProps) {
     selectedIndex === null ? null : gallery.photos[selectedIndex];
 
   return (
-    <section className="bg-white py-24" aria-labelledby="photo-gallery-title">
+    <section className="bg-white py-16" aria-labelledby={titleId}>
       <div className="container mx-auto px-6">
-        <div className="mb-12 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
-          <h2
-            id="photo-gallery-title"
-            className="text-4xl font-bold tracking-tight text-gray-900"
-          >
-            {gallery.title}
-          </h2>
-          <p className="text-base text-gray-600">{gallery.details}</p>
+        <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between sm:gap-10">
+          <div className="max-w-3xl">
+            <h2
+              id={titleId}
+              className="text-4xl font-bold tracking-tight text-gray-900"
+            >
+              {gallery.title}
+            </h2>
+            {gallery.description && (
+              <p className="mt-3 text-base leading-7 text-gray-600">
+                {gallery.description}
+              </p>
+            )}
+          </div>
+          <p className="shrink-0 text-base text-gray-600">{gallery.details}</p>
         </div>
 
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
@@ -81,7 +89,7 @@ export function PhotoGallery({ gallery }: PhotoGalleryProps) {
               key={photo.src}
               onClick={() => setSelectedIndex(index)}
               className={`group relative overflow-hidden rounded-2xl bg-gray-200 text-left shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 ${
-                index > 1 ? "md:col-span-2" : ""
+                photo.width / photo.height > 1.75 ? "md:col-span-2" : ""
               }`}
               style={{ aspectRatio: `${photo.width} / ${photo.height}` }}
               aria-label={`Open photo ${index + 1} of ${gallery.photos.length}`}

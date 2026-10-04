@@ -20,7 +20,7 @@ export const faqsData: FAQContentCategory[] = [
       {
         question: "PhD program",
         answer:
-          "The Department of Statistical Sciences offers a PhD program in Statistics with mathematical finance as a research field.",
+          "The Department of Statistical Sciences offers a PhD program in Statistics with mathematical finance as a research field. Our faculty are always interested in hearing from prospective students with strong mathematical and technical backgrounds who would like to join our research group.",
         bullets: [
           "Applications generally close in mid-November; consult the department’s admissions page for the current deadline.",
           "Prospective students are encouraged to contact faculty members with related research interests.",
@@ -34,7 +34,12 @@ export const faqsData: FAQContentCategory[] = [
       {
         question: "Undergraduate and master’s students",
         answer:
-          "We do not currently offer a thesis-based MSc program in mathematical finance. Undergraduate and MSc students interested in completing a research project with a member of the group are welcome to contact faculty members directly.",
+          "We do not currently offer a thesis-based MSc program in mathematical finance. Current University of Toronto undergraduate and master’s students with strong technical backgrounds are invited to contact faculty members directly. This includes students in statistics, mathematics, and actuarial science, as well as economics, computer science, and related fields. Opportunities include:",
+        bullets: [
+          "A reading course supervised by a faculty member.",
+          "A research course focused on a mathematical finance topic.",
+          "A side research project that supports a faculty member or an ongoing project while providing research experience.",
+        ],
       },
       {
         question: "Industry collaboration",

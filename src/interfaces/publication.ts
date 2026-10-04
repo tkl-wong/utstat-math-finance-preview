@@ -9,6 +9,7 @@ interface Publication {
   links: {
     doi?: string;
     publisher?: string;
+    proceeding?: string;
     pdf?: string;
     arxiv?: string;
     ssrn?: string;

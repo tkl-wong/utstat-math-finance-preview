@@ -9,11 +9,12 @@ import {
 export function PublicationLinks({
   links,
 }: {
-  links: { doi?: string; publisher?: string; arxiv?: string; ssrn?: string; pdf?: string; code?: string };
+  links: { doi?: string; publisher?: string; proceeding?: string; arxiv?: string; ssrn?: string; pdf?: string; code?: string };
 }) {
   const linkIcons = {
     doi: { icon: LinkIcon, label: "DOI" },
     publisher: { icon: LinkIcon, label: "Published" },
+    proceeding: { icon: DocumentTextIcon, label: "Proceeding" },
     arxiv: { icon: AcademicCapIcon, label: "arXiv" },
     ssrn: { icon: AcademicCapIcon, label: "SSRN" },
     pdf: { icon: DocumentArrowDownIcon, label: "PDF" },

@@ -121,7 +121,7 @@ const PublicationsSection = () => {
             <div className="mb-6">
               <div className="text-gray-600">
                 Showing <span className="font-medium text-gray-900">{filteredPublications.length}</span>{" "}
-                {filteredPublications.length === 1 ? "publication" : "publications"}
+                {filteredPublications.length === 1 ? "publication" : "publications"} since 2020
               </div>
             </div>
             <PublicationList groupedByYear={groupedByYear} />
