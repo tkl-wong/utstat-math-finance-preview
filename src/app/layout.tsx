@@ -1,6 +1,7 @@
 import Footer from "@/app/_components/footer";
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
+import Script from "next/script";
 
 import "./globals.css";
 import Header from "./_components/header";
@@ -54,8 +55,29 @@ export default function RootLayout({
         />
         <meta name="theme-color" content="#ffffff" />
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.MathJax = {
+                tex: {
+                  inlineMath: [['$', '$'], ['\\\\(', '\\\\)']],
+                  displayMath: [['$$', '$$'], ['\\\\[', '\\\\]']],
+                  processEscapes: true
+                },
+                options: {
+                  skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+                }
+              };
+            `,
+          }}
+        />
       </head>
       <body className={inter.className} suppressHydrationWarning>
+        <Script
+          id="mathjax"
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+          strategy="afterInteractive"
+        />
         <Header />
         <div className="min-h-screen pt-16">{children}</div>
         <Footer />

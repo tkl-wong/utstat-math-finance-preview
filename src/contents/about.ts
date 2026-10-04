@@ -38,7 +38,7 @@ export const aboutContent: AboutContent = {
     },
     {
       title: "Foster Talent",
-      description: "Nurture the next generation of mathematical finance experts through world-class research and collaboration.",
+      description: "We train outstanding PhD students and postdoctoral researchers to become future leaders in academia and industry.",
       iconPath: "M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z",
       href: "/people#phd-students-postdocs",
       linkLabel: "See Our Group"

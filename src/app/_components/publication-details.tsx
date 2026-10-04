@@ -1,4 +1,5 @@
 import { BookOpenIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
+import { MathText } from "./math-text";
 import { PublicationLinks } from "./publication-links";
 
 export function PublicationDetails({
@@ -63,9 +64,7 @@ export function PublicationDetails({
             <span className="hidden group-open:inline">Hide abstract</span>
             <ChevronDownIcon className="h-4 w-4 transition-transform group-open:rotate-180" />
           </summary>
-          <p className="mt-2 text-sm leading-relaxed text-gray-700">
-            {abstract}
-          </p>
+          <MathText className="mt-2 text-sm leading-relaxed text-gray-700" children={abstract} />
         </details>
       ) : null}
     </>
