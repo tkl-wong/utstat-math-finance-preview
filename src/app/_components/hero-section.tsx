@@ -14,7 +14,7 @@ export const HeroSection = () => {
       className="relative min-h-[68vh] overflow-hidden bg-fixed bg-cover"
       style={{
         backgroundImage: `url(${backgroundImagePath})`,
-        backgroundPosition: "center",
+        backgroundPosition: "center 145%",
       }}
     >
       <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-black/70 to-transparent" />
