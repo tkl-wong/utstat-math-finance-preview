@@ -2,7 +2,7 @@ export const facultyMembersData: FacultyMember[] = [
   {
     name: "Sebastian Jaimungal",
     title: "Professor and Department Chair",
-    image: "/utstat-math-finance/assets/members/SebastianJaimungal.jpg",
+    image: "/utstat-math-finance-preview/assets/members/SebastianJaimungal.jpg",
     imagePosition: "62% center",
     imageScale: 1.55,
     imageTransformOrigin: "center 28%",
@@ -17,7 +17,7 @@ export const facultyMembersData: FacultyMember[] = [
   {
     name: "Ting-Kam Leonard Wong",
     title: "Associate Professor",
-    image: "/utstat-math-finance/assets/members/LeonardWong.jpg",
+    image: "/utstat-math-finance-preview/assets/members/LeonardWong.jpg",
     imagePosition: "center top",
     bio: "Portfolio theory, optimal transport, information geometry, stochastic processes, statistical methodology, probability, and mathematical finance.",
     links: {
@@ -30,7 +30,7 @@ export const facultyMembersData: FacultyMember[] = [
   {
     name: "Silvana Pesenti",
     title: "Associate Professor",
-    image: "/utstat-math-finance/assets/members/SilvanaPesenti.jpg",
+    image: "/utstat-math-finance-preview/assets/members/SilvanaPesenti.jpg",
     imagePosition: "center top",
     bio: "Actuarial science, quantitative risk management, risk measures, dependence uncertainty, stress testing, systemic risk, and insurance.",
     links: {
@@ -56,7 +56,7 @@ export const facultyMembersData: FacultyMember[] = [
   {
     name: "Xiaofei Shi",
     title: "Assistant Professor",
-    image: "/utstat-math-finance/assets/members/XiaofeiShi.jpg",
+    image: "/utstat-math-finance-preview/assets/members/XiaofeiShi.jpg",
     imagePosition: "center 5%",
     bio: "Stochastic optimization, stochastic differential equations, portfolio theory, transaction costs, machine learning, statistical methodology, and applications to mathematical finance.",
     links: {
@@ -69,7 +69,7 @@ export const facultyMembersData: FacultyMember[] = [
   {
     name: "Christopher Blier-Wong",
     title: "Assistant Professor",
-    image: "/utstat-math-finance/assets/members/ChristopherBlierWong.jpg",
+    image: "/utstat-math-finance-preview/assets/members/ChristopherBlierWong.jpg",
     imagePosition: "center top",
     bio: "Actuarial science, quantitative risk management, dependence modelling, risk sharing, decision theory, statistical methodology, and machine learning in insurance.",
     links: {

@@ -128,7 +128,7 @@ export const facultyStudentsData: FacultyMember[] = [
     },
   },
   {
-    name: "Aiden Boyle",
+    name: "Aidan Boyle",
     title: "PhD student (Sebastian Jaimungal & Dena Firoozi)",
     since: 2026,
     image: "",
